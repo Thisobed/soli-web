@@ -436,9 +436,7 @@ play();
 </div>
 <button type="button" class="dm-x" data-close aria-label="Cerrar">×</button>
 </div>
-<form id="demo-form" name="demo" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate style="display:flex;flex-direction:column;gap:16px">
-<input type="hidden" name="form-name" value="demo">
-<p class="dm-hp"><label>No llenar: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+<form id="demo-form" name="demo" novalidate style="display:flex;flex-direction:column;gap:16px">
 <div class="dm-field">
 <label for="dm-nombre">Nombre</label>
 <input id="dm-nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="dm-nombre-err">
@@ -490,9 +488,12 @@ form.addEventListener('submit',function(e){e.preventDefault();ferr.textContent='
  var a=vNombre(),b=vCorreo(),c=vTel();
  if(!(a&&b&&c)){var f=form.querySelector('[aria-invalid="true"]');if(f)f.focus();return;}
  var btn=form.querySelector('.dm-submit');btn.disabled=true;btn.textContent='Enviando…';
- var body=new URLSearchParams(new FormData(form)).toString();
- fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body})
- .then(function(r){if(!r.ok)throw new Error(r.status);form.reset();form.style.display='none';ok.classList.add('show');ok.querySelector('button').focus();})
+ fetch('https://web-production-0f5fd.up.railway.app/demo',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nombre:nombre.value.trim(),correo:correo.value.trim(),telefono:tel.value.trim()})})
+ .then(function(r){return r.json().then(function(data){return {status:r.status,data:data};});})
+ .then(function(res){
+  if(res.data&&res.data.ok){form.reset();form.style.display='none';ok.classList.add('show');ok.querySelector('button').focus();}
+  else{ferr.textContent=(res.data&&res.data.errores&&res.data.errores[0])||'No se pudo enviar. Intenta de nuevo o escríbenos a demo@soli.com.mx.';}
+ })
  .catch(function(){ferr.textContent='No se pudo enviar. Intenta de nuevo o escríbenos a demo@soli.com.mx.';})
  .finally(function(){btn.disabled=false;btn.textContent='Enviar solicitud';});
 });

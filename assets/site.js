@@ -10,7 +10,7 @@
  * Mientras esté vacío no se carga ninguna analítica.
  */
 (function () {
-  var CF_TOKEN = '';
+  var CF_TOKEN = '9b45594e542e42b8a61f29908da86e46';
   var CLAVE = 'soli-consentimiento-v1';
 
   function leer() { try { return localStorage.getItem(CLAVE); } catch (e) { return null; } }

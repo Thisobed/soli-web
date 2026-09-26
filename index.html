@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ónix · Cotizador de fletes por WhatsApp para logísticas | SOLI</title>
-<meta name="description" content="Ónix cotiza tus fletes por WhatsApp en segundos, con tus costos reales, casetas y tu margen, y manda la cotización formal por correo. Pide tu demo.">
+<title>Ónix · Cotizador de fletes por WhatsApp | SOLI</title>
+<meta name="description" content="Cotiza tus fletes por WhatsApp en segundos. Ónix te responde cuánto cobrar con los costos reales de tu empresa y te manda la cotización formal por correo. Pide tu demo.">
 <link rel="canonical" href="https://soli.com.mx/">
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://web-production-0f5fd.up.railway.app https://cloudflareinsights.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
@@ -15,504 +15,415 @@
 <meta property="og:site_name" content="SOLI">
 <meta property="og:locale" content="es_MX">
 <meta property="og:url" content="https://soli.com.mx/">
-<meta property="og:title" content="Ónix · Tu flete, cotizado antes que el de tu competencia">
-<meta property="og:description" content="Cotiza fletes por WhatsApp en segundos con los costos reales de tu logística. Pide tu demo.">
+<meta property="og:title" content="Ónix · Cotiza tus fletes por WhatsApp en segundos">
+<meta property="og:description" content="Ónix te responde cuánto cobrar por cada viaje, con los costos reales de tu empresa. Pide tu demo.">
 <meta property="og:image" content="https://soli.com.mx/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="SOLI · Ónix: tu flete, cotizado antes que el de tu competencia">
+<meta property="og:image:alt" content="SOLI · Ónix, cotizador de fletes por WhatsApp">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ónix · Tu flete, cotizado antes que el de tu competencia">
-<meta name="twitter:description" content="Cotiza fletes por WhatsApp en segundos con los costos reales de tu logística.">
+<meta name="twitter:title" content="Ónix · Cotiza tus fletes por WhatsApp en segundos">
+<meta name="twitter:description" content="Ónix te responde cuánto cobrar por cada viaje, con los costos reales de tu empresa.">
 <meta name="twitter:image" content="https://soli.com.mx/og-image.jpg">
 <!-- Íconos -->
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<!-- Rendimiento: fuentes propias + imagen principal primero -->
+<!-- Fuentes propias (sin llamadas a terceros) -->
 <link rel="preload" href="/fonts/playfair-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/img/onix-piedra.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"SOLI · Soluciones Logísticas Inteligentes","alternateName":"SOLI","url":"https://soli.com.mx/","logo":"https://soli.com.mx/icon-512.png","email":"contacto@soli.com.mx","areaServed":"MX"}
+{"@context":"https://schema.org","@type":"Organization","name":"SOLI · Soluciones Logísticas Inteligentes","alternateName":"SOLI","founder":{"@type":"Person","name":"Dan Obed Romero Merino"},"url":"https://soli.com.mx/","logo":"https://soli.com.mx/icon-512.png","email":"contacto@soli.com.mx","areaServed":"MX"}
 </script>
 <style>
+:root{--ink:#0a0a0a;--body:#3f3f46;--muted:#52525b;--line:#e7e5e4;--alt:#fafaf9;--naranja:#f38004;--naranja-txt:#b05400;--ok:#15803d}
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
-html,body{overflow-x:hidden}
-
-body{margin:0;background:#ffffff;color:#27272a;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:#27272a;text-decoration:none}a:hover{color:#0a0a0a}
-.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
-.h2{margin:0;font-family:"Inter Tight",Inter,sans-serif;font-weight:400;font-size:56px;line-height:1.2;letter-spacing:-2.8px;color:#0a0a0a}
-.lead{margin:0;font-size:18px;line-height:1.6;color:#52525b}
-.card{background:#ffffff;border:1px solid #f38004;border-radius:16px}
-.eyebrow{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;line-height:1.33;letter-spacing:.08em;text-transform:uppercase;color:#52525b}
-.ghost{display:inline-flex;align-items:center;gap:8px;min-height:44px;box-sizing:border-box;padding:12px 18px;border:1px solid #e4e4e7;border-radius:6px;color:#0a0a0a;font-size:15px;font-weight:500;transition:border-color 150ms ease-out}
-.ghost:hover{border-color:#0a0a0a}
-.solid{display:inline-flex;align-items:center;gap:8px;min-height:44px;box-sizing:border-box;padding:12px 18px;border-radius:6px;background:#0a0a0a;color:#ffffff;font-size:15px;font-weight:500}
-.solid:hover{background:#27272a;color:#ffffff}
-.msg{animation:msgIn 320ms ease-out both}
-@keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.dot{animation:blink 1.1s infinite ease-in-out}.d2{animation-delay:.15s}.d3{animation-delay:.3s}
-@keyframes blink{0%,80%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
-@media (prefers-reduced-motion:reduce){.msg,.dot{animation:none}}
-
-
-@media (max-width:1260px){.wrap{box-sizing:border-box;padding-left:24px!important;padding-right:24px!important}.wrap>div[style*="max-width: 1200px"]{padding:0}}
-@media (max-width:900px){
- [style*="grid-template-columns"]{grid-template-columns:1fr!important}
- [style*="border-right: 1px solid"]{border-right:none!important;border-bottom:1px solid #e4e4e7;padding-left:0!important;padding-right:0!important}
- .h1{font-size:52px!important}
- .h2{font-size:38px!important;letter-spacing:-1.5px!important}
- h2[style*="font-size: 77px"]{font-size:48px!important}
- .topnav a:not(.ghost){display:none}
- section[style*="padding: 144px"]{padding-top:96px!important;padding-bottom:96px!important}
- #top>div:last-child{height:auto!important}
- #top img{height:360px!important}
- [style*="justify-content: space-between; align-items: flex-end"]{flex-direction:column;align-items:flex-start!important}
- .wrap>div[style*="max-width: 1200px"]>div{padding-left:0!important;padding-right:0!important}
- [style*="gap: 4px; align-items: flex-end"]{align-items:flex-start!important}
- [style*="height: 600px"]{height:auto!important;min-height:520px}
- section.wrap:not([style*="border-top"]){padding-top:56px!important;padding-bottom:56px!important}
- #top{padding-top:32px!important;padding-bottom:48px!important;gap:24px!important}
- #top .mono[style*="position: absolute"]{display:none}
- [style*="gap: 64px"]{gap:32px!important}
- [style*="gap: 48px"]{gap:24px!important}
- .card{padding:24px!important}
- .card[style*="height: 600px"]{padding:0!important}
- [style*="height: 220px"]{height:150px!important}
- svg[viewBox="0 0 560 220"]{height:150px}
- [style*="padding: 32px; display: flex; flex-direction: column; gap: 28px"]{padding:20px!important}
- .card img{max-width:240px!important;margin:0 auto}
- #demo img{max-width:280px!important}
- [style*="padding: 56px"]{padding-top:28px!important;padding-bottom:28px!important}
- [style*="padding: 48px"]{padding-top:28px!important;padding-bottom:28px!important}
- footer.wrap{flex-direction:column!important;align-items:flex-start!important;gap:16px!important}
- footer.wrap>div:first-child{flex-direction:column;align-items:flex-start!important;gap:8px!important}
- .h1{font-size:46px!important}
- .lead{font-size:17px!important}
- [style*="border: 1px dashed"]{padding:24px!important}
-
-}
-
-
-.dm-dialog{border:1px solid #f38004;border-radius:16px;padding:0;width:min(460px,calc(100vw - 32px));max-height:calc(100vh - 32px);background:#ffffff;color:#0a0a0a;box-shadow:0 24px 64px rgba(0,0,0,.18)}
-.dm-dialog::backdrop{background:rgba(10,10,10,.45);backdrop-filter:blur(4px)}
-.dm-dialog[open]{animation:msgIn 220ms ease-out both}
-.dm-body{padding:32px;display:flex;flex-direction:column;gap:20px}
-.dm-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
-.dm-title{margin:0;font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:34px;line-height:1.05;color:#0a0a0a}
-.dm-sub{margin:8px 0 0;font-size:15px;line-height:1.5;color:#52525b}
-.dm-x{flex:none;width:44px;height:44px;border:1px solid #e4e4e7;border-radius:6px;background:#fff;color:#0a0a0a;font-size:20px;line-height:1;cursor:pointer}
-.dm-x:hover{border-color:#0a0a0a}
-.dm-field{display:flex;flex-direction:column;gap:6px}
-.dm-field label{font-size:14px;font-weight:500;color:#27272a}
-.dm-field input{font:inherit;font-size:16px;min-height:44px;box-sizing:border-box;padding:10px 12px;border:1px solid #d4d4d8;border-radius:6px;background:#fff;color:#0a0a0a;outline:none}
-.dm-field input:focus{border-color:#f38004;box-shadow:0 0 0 3px rgba(243,128,4,.18)}
-.dm-field input[aria-invalid="true"]{border-color:#b42318}
-.dm-err{min-height:18px;font-size:13px;line-height:1.4;color:#b42318}
-.dm-hint{font-size:13px;color:#71717a}
-.dm-submit{border:none;cursor:pointer;justify-content:center;width:100%;font:inherit;font-size:15px;font-weight:500}
-.dm-submit[disabled]{opacity:.6;cursor:default}
-.dm-form-err{font-size:14px;color:#b42318;min-height:0}
-.dm-ok{display:none;flex-direction:column;gap:12px;align-items:flex-start}
-.dm-ok.show{display:flex}
-.dm-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.dm-legal{margin:0;font-size:13px;line-height:1.5;color:#52525b}.dm-legal a{color:#0a0a0a;text-decoration:underline;text-decoration-color:#f38004;text-underline-offset:3px}
-.cta-note{margin:0;font-size:14px;color:#52525b}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%}
+a{color:var(--ink)}a:hover{color:var(--naranja-txt)}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid rgba(243,128,4,.45);outline-offset:2px}
-.skip{position:absolute;left:-9999px;top:8px;z-index:60;background:#0a0a0a;color:#fff;padding:10px 14px;border-radius:6px}.skip:focus{left:8px;color:#fff}
+.skip{position:absolute;left:-9999px;top:8px;z-index:60;background:var(--ink);color:#fff;padding:10px 14px;border-radius:6px}.skip:focus{left:8px;color:#fff}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.serif{font-family:"Playfair Display",Georgia,serif;font-weight:400}
+.eyebrow{margin:0;font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--naranja-txt)}
+.h2{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;font-size:48px;line-height:1.1}
+.head{display:flex;flex-direction:column;gap:12px;max-width:760px}
+.sec{padding:96px 0}
+.sec-alt{background:var(--alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:8px;font-size:17px;font-weight:600;text-decoration:none;border:none;cursor:pointer;font-family:inherit}
+.btn-main{background:var(--naranja);color:var(--ink)}.btn-main:hover{background:#e07400;color:var(--ink)}
+.btn-line{border:1px solid #d6d3d1;background:#fff;color:var(--ink);font-weight:500}.btn-line:hover{border-color:var(--ink);color:var(--ink)}
+.btn-sm{min-height:44px;padding:0 20px;font-size:15px}
+.check{flex:none}
+
+/* barra superior */
+.top{border-bottom:1px solid var(--line);background:#fff}
+.top .wrap{height:88px;display:flex;align-items:center;justify-content:space-between}
+.top nav{display:flex;align-items:center;gap:36px;font-size:15px}
+.top nav a:not(.btn){text-decoration:none;color:var(--body)}
+.top nav a:not(.btn):hover{color:var(--ink)}
+
+/* inicio */
+.hero{padding:72px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:center}
+.hero-txt{display:flex;flex-direction:column;gap:28px;align-items:flex-start}
+.pill{display:inline-flex;align-items:center;padding:6px 14px;border:1px solid var(--naranja);border-radius:999px;font-size:14px;font-weight:500;color:var(--naranja-txt)}
+.h1{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;font-size:72px;line-height:1.04;letter-spacing:-.8px}
+.lead{margin:0;font-size:20px;line-height:1.6;color:var(--body);max-width:540px}
+.lead strong{color:var(--ink);font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.ticks{display:flex;flex-wrap:wrap;gap:12px 24px;margin:0;padding:0;list-style:none;font-size:15px;color:var(--body)}
+.ticks li{display:inline-flex;align-items:center;gap:8px}
+.phone{justify-self:center;width:360px;border:10px solid var(--ink);border-radius:44px;background:#f5f5f4;overflow:hidden}
+.phone-top{padding:18px 20px 14px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}
+.avatar{width:36px;height:36px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",Georgia,serif;font-size:18px}
+.phone-top b{display:block;font-size:15px;font-weight:600}.phone-top small{font-size:12px;color:var(--ok)}
+.chat{padding:18px 16px 26px;display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.5;min-height:420px}
+.b{max-width:80%;background:#fff;border:1px solid var(--line);padding:10px 12px}
+.b-yo{align-self:flex-end;border-radius:14px 14px 4px 14px}
+.b-onix{align-self:flex-start;max-width:88%;border-radius:14px 14px 14px 4px}
+.b-cot{border-color:var(--naranja);padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.b-cot .folio{font-size:12px;font-weight:600;color:var(--naranja-txt)}
+.b-cot .gris{color:var(--muted)}
+.b-cot .precio{font-size:18px;font-weight:600;margin-top:4px}
+.b-ok{display:flex;gap:8px;align-items:flex-start}
+
+/* tarjetas */
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.card h3{margin:0;font-size:20px;font-weight:600;line-height:1.3}
+.card p{margin:0;font-size:16px;line-height:1.6;color:var(--body)}
+.sec .head+*{margin-top:40px}
+
+/* comparación */
+.cmp{border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.cmp-row{display:grid;grid-template-columns:260px minmax(0,1fr) minmax(0,1fr);border-bottom:1px solid var(--line);font-size:17px;line-height:1.5}
+.cmp-row:last-child{border-bottom:none}
+.cmp-row>*{padding:22px 28px}
+.cmp-row .k{font-weight:600}
+.cmp-row .no{color:var(--muted)}
+.cmp-head{background:var(--alt);font-size:15px;font-weight:600}
+.cmp-head .no{color:var(--muted)}.cmp-head .si{color:var(--naranja-txt)}
+.cmp .lbl{display:none}
+
+/* pasos */
+.num{width:44px;height:44px;border-radius:50%;background:var(--naranja);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:600}
+.pasos .card{padding:32px;gap:14px}
+.pasos .card h3{font-size:22px}
+
+/* incluye */
+.inc .card p{font-size:15px}
+.inc .card h3{font-size:18px}
+
+/* demo */
+.demo .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:start}
+.demo-izq{display:flex;flex-direction:column;gap:32px}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:24px}
+.steps li{display:flex;gap:18px;align-items:flex-start}
+.steps .n{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--naranja);color:var(--naranja-txt);display:flex;align-items:center;justify-content:center;font-weight:600}
+.steps b{display:block;font-size:18px;font-weight:600;margin-bottom:4px}
+.steps span{font-size:16px;line-height:1.6;color:var(--body)}
+.form{background:#fff;border:1px solid var(--naranja);border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:18px;box-shadow:0 20px 48px rgba(10,10,10,.06)}
+.form h3{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;font-size:32px;line-height:1.1}
+.form .sub{margin:-10px 0 0;font-size:15px;color:var(--muted)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:14px;font-weight:500}
+.field input{font:inherit;font-size:16px;min-height:48px;padding:10px 14px;border:1px solid #d6d3d1;border-radius:8px;background:#fff;color:var(--ink)}
+.field input:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 3px rgba(243,128,4,.18)}
+.field input[aria-invalid="true"]{border-color:#b42318}
+.err{min-height:18px;font-size:13px;line-height:1.4;color:#b42318}
+.hint{font-size:13px;color:var(--muted)}
+.legal{margin:0;font-size:13px;line-height:1.5;color:var(--muted)}
+.form-err{margin:0;font-size:14px;color:#b42318}
+.form-err:empty{display:none}
+.form button[disabled]{opacity:.6;cursor:default}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.ok{display:none;flex-direction:column;gap:12px}
+.ok.show{display:flex}
+.ok p{margin:0;font-size:16px;line-height:1.6;color:var(--body)}
+
+/* preguntas */
+.faq .wrap{display:grid;grid-template-columns:400px minmax(0,1fr);gap:64px;align-items:start}
+.faq dl{margin:0}
+.faq dt{font-size:19px;font-weight:600;padding-top:24px}
+.faq dd{margin:8px 0 0;padding-bottom:24px;border-bottom:1px solid var(--line);font-size:16px;line-height:1.6;color:var(--body)}
+.faq dt:first-child{padding-top:0}
+.faq dd:last-child{border-bottom:none;padding-bottom:0}
+
+/* cierre */
+.cierre{background:var(--ink);color:#fff;padding:96px 0}
+.cierre .wrap{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:64px;align-items:center}
+.cierre h2{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;font-size:60px;line-height:1.05;color:#fff}
+.cierre p{margin:0;font-size:19px;line-height:1.6;color:#d6d3d1;max-width:560px}
+.cierre .txt{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+.cierre a:not(.btn){color:#fff}
+.cierre img{width:300px;height:auto;justify-self:center;display:block}
+
+/* pie */
+.pie .wrap{min-height:112px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:14px;color:var(--muted)}
+.pie .marca{display:flex;align-items:center;gap:16px}
+.pie nav{display:flex;flex-wrap:wrap;gap:8px 24px}
+.pie a{color:var(--muted);text-decoration:none}.pie a:hover{color:var(--ink)}
+
+/* ---------- tablet ---------- */
+@media (max-width:1024px){
+ .h1{font-size:56px}
+ .hero .wrap{gap:40px}
+ .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .faq .wrap{grid-template-columns:1fr;gap:32px}
+ .top nav{gap:24px}
+}
+/* ---------- celular ---------- */
+@media (max-width:760px){
+ .top .wrap{height:68px}
+ .top nav a:not(.btn){display:none}
+ .top img{height:24px!important;width:auto}
+ .sec{padding:56px 0}
+ .hero{padding:36px 0 56px}
+ .hero .wrap{grid-template-columns:1fr;gap:40px}
+ .hero-txt{gap:22px}
+ .pill{font-size:13px}
+ .h1{font-size:42px;line-height:1.08;letter-spacing:-.4px}
+ .lead{font-size:17px}
+ .cta-row{width:100%;flex-direction:column;gap:12px}
+ .cta-row .btn{width:100%}
+ .ticks{flex-direction:column;gap:10px}
+ .phone{width:min(320px,100%);border-width:9px;border-radius:40px}
+ .chat{font-size:13px;min-height:0}
+ .h2{font-size:32px;line-height:1.12}
+ .eyebrow{font-size:13px}
+ .sec .head+*{margin-top:28px}
+ .grid3,.grid4{grid-template-columns:1fr;gap:14px}
+ .card{padding:22px;border-radius:14px}
+ .cmp-head{display:none}
+ .cmp-row{grid-template-columns:1fr;font-size:15px;padding:18px 20px;gap:6px}
+ .cmp-row>*{padding:0}
+ .cmp-row .k{font-size:16px}
+ .cmp-row .si{font-weight:500;color:var(--naranja-txt)}
+ .cmp .lbl{display:inline}
+ .demo .wrap{grid-template-columns:1fr;gap:32px}
+ .form{padding:24px;border-radius:18px}
+ .form h3{font-size:28px}
+ .faq dt{font-size:17px;padding-top:20px}
+ .faq dd{font-size:15px;padding-bottom:20px}
+ .cierre{padding:64px 0}
+ .cierre .wrap{grid-template-columns:1fr;gap:24px}
+ .cierre img{width:160px;justify-self:start;order:-1}
+ .cierre h2{font-size:38px;line-height:1.08}
+ .cierre p{font-size:17px}
+ .cierre .btn{width:100%}
+ .pie .wrap{flex-direction:column;align-items:flex-start;justify-content:center;padding-top:28px;padding-bottom:36px}
+}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 
-<div style="width: 100%; min-height: 100vh; background: #ffffff; display: flex; flex-direction: column; align-items: center;">
-
-<!-- NAV -->
-<header class="wrap" style="width: 100%; max-width: 1200px; box-sizing: border-box; padding: 24px 0; display: flex; align-items: center; justify-content: space-between;">
-<a href="#top" aria-label="SOLI, inicio"><img src="/img/soli-logo.webp" alt="SOLI" width="80" height="30" style="height: 30px; width: auto; display: block;"></a>
-<nav class="topnav" style="display: flex; gap: 32px; align-items: center; font-size: 14px;">
-<a href="#agentes">Agentes</a>
-<a href="#onix">Ónix</a>
+<header class="top">
+<div class="wrap">
+<a href="#inicio" aria-label="SOLI, inicio"><img src="/img/soli-logo.webp" alt="SOLI" width="80" height="30" style="height:30px;width:auto;display:block"></a>
+<nav aria-label="Principal">
 <a href="#como">Cómo funciona</a>
-<a href="#precio">Precio real</a>
-<a class="ghost" href="#demo" data-demo style="padding: 10px 16px; font-size: 14px;">Pide tu demo</a>
+<a href="#incluye">Qué incluye</a>
+<a href="#preguntas">Preguntas</a>
+<a href="#demo" class="btn btn-main btn-sm" data-demo>Pide tu demo</a>
 </nav>
+</div>
 </header>
 
 <main id="main">
-<!-- HERO -->
-<section class="wrap" id="top" style="width: 100%; max-width: 1200px; box-sizing: border-box; padding: 96px 0 104px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; align-items: center;">
-<div style="display: flex; flex-direction: column; gap: 32px; align-items: flex-start;">
-<a href="#onix" style="display: inline-flex; gap: 10px; align-items: center; border: 1px solid #e4e4e7; border-radius: 9999px; padding: 6px 14px; font-size: 14px; color: #27272a;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #15803d;"></span>Ónix ya está cotizando<span style="color: #b05400;">›</span></a>
-<h1 class="h1" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 88px; line-height: 1; letter-spacing: -0.9px; color: #0a0a0a;">Tu flete, cotizado antes que el de tu competencia.</h1>
-<p class="lead" style="max-width: 500px;">SOLI construye agentes que trabajan por tu logística. <span style="color: #27272a;">Ónix</span> contesta por WhatsApp cuánto cobrar por un viaje, con <span style="color: #27272a;">tus</span> costos reales, y manda la cotización formal por correo.</p>
-<div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
-<div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-<a class="solid" href="#demo" data-demo>Pide tu demo</a>
-<a href="#como" style="font-size: 15px; display: inline-flex; gap: 6px; align-items: center; min-height: 44px;">Ver cómo funciona <span aria-hidden="true">›</span></a>
+
+<section class="hero" id="inicio">
+<div class="wrap">
+<div class="hero-txt">
+<span class="pill">Cotizador de fletes por WhatsApp</span>
+<h1 class="h1">Cotiza tus fletes por WhatsApp en segundos.</h1>
+<p class="lead">Escribes la ruta, <strong>Ónix te responde cuánto cobrar</strong> con los costos reales de tu empresa, y te manda la cotización formal a tu correo.</p>
+<div class="cta-row">
+<a href="#demo" class="btn btn-main" data-demo>Pide tu demo</a>
+<a href="#como" class="btn btn-line">Ver cómo funciona</a>
 </div>
-<p class="cta-note">Prueba Ónix 7 días con tus propias rutas.</p>
+<ul class="ticks">
+<li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b05400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Prueba de 7 días</li>
+<li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b05400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Sin instalar nada</li>
+<li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b05400" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Con tus propios costos</li>
+</ul>
 </div>
+
+<figure class="phone" style="margin:0" aria-label="Ejemplo de una conversación con Ónix en WhatsApp">
+<div class="phone-top"><div class="avatar" aria-hidden="true">Ó</div><div><b>Ónix · Cotizador</b><small>en línea</small></div></div>
+<div class="chat">
+<div class="b b-yo">Aguascalientes a Toluca, full, solo ida</div>
+<div class="b b-onix b-cot">
+<span class="folio">Folio 12</span>
+<span style="font-weight:600">Aguascalientes → Toluca</span>
+<span class="gris">Full · solo ida · 482 km · casetas incluidas</span>
+<span class="precio">Precio sugerido: $*****</span>
+<span class="gris">Te mandé la cotización formal a tu correo.</span>
 </div>
-<div style="position: relative; height: 620px; display: flex; align-items: center; justify-content: center;">
-<div style="position: relative; width: 100%; display: flex; flex-direction: column; align-items: center;"><div aria-hidden="true" style="position: absolute; left: 40%; bottom: 1%; width: 44%; height: 16%; transform: skewX(-55deg); transform-origin: left bottom; background: linear-gradient(90deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.18) 45%, rgba(0,0,0,0) 100%); border-radius: 40% 60% 60% 40%; filter: blur(8px);"></div><img src="/img/onix-piedra.webp" alt="Piedra de ónix en bruto, símbolo de Ónix, el cotizador de fletes de SOLI" width="316" height="564" fetchpriority="high" decoding="async" style="height: 560px; width: auto; display: block; position: relative; z-index: 1;"></div>
-<div class="mono" style="position: absolute; right: 12px; top: 40px; font-size: 12px; color: #71717a; text-align: right; line-height: 1.6;">estado<br><span style="color: #15803d;">● activo</span></div>
+<div class="b b-yo">confirma el folio 12</div>
+<div class="b b-onix b-ok"><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top:1px"><path d="M5 12l5 5L20 7"/></svg><span>Folio 12 confirmado. Te llegó la confirmación por correo.</span></div>
+</div>
+</figure>
 </div>
 </section>
 
-<!-- PROBLEMA -->
-<section class="wrap" style="width: 100%; border-top: 1px solid #e4e4e7; border-bottom: 1px solid #e4e4e7; display: flex; justify-content: center;">
-<div style="width: 100%; max-width: 1200px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));">
-<div style="padding: 48px 32px 48px 0; border-right: 1px solid #e4e4e7; display: flex; flex-direction: column; gap: 12px;">
-<span class="eyebrow">El problema</span>
-<p style="margin: 0; font-size: 20px; line-height: 1.4; color: #0a0a0a;">Cotizar a mano toma horas: calculadora, mapa, casetas y la hoja de Excel de siempre.</p>
-</div>
-<div style="padding: 48px 32px; border-right: 1px solid #e4e4e7; display: flex; flex-direction: column; gap: 12px;">
-<span class="eyebrow">Lo que cuesta</span>
-<p style="margin: 0; font-size: 20px; line-height: 1.4; color: #0a0a0a;">El cliente no espera. El flete se lo lleva quien contesta primero.</p>
-</div>
-<div style="padding: 48px 0 48px 32px; display: flex; flex-direction: column; gap: 12px;">
-<span class="eyebrow">Y cuando se contesta rápido</span>
-<p style="margin: 0; font-size: 20px; line-height: 1.4; color: #0a0a0a;">Se cotiza al ojo, y un precio al ojo puede dejarte trabajando a pérdida.</p>
-</div>
-</div>
-</section>
-
-<!-- AGENTES -->
-<section class="wrap" id="agentes" style="width: 100%; max-width: 1200px; box-sizing: border-box; padding: 144px 0 96px; display: flex; flex-direction: column; gap: 64px;">
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px;">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px;">
-<span class="eyebrow">Agentes SOLI</span>
-<h2 class="h2">Una piedra por cada agente.</h2>
-</div>
-<p class="lead" style="max-width: 420px;">Cada agente de SOLI automatiza una tarea completa de tu operación y lleva el nombre de una piedra. Empezamos por la más urgente: cotizar.</p>
-</div>
-<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 16px;">
-<a href="#onix" class="card" style="overflow: hidden; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; padding: 40px; align-items: center; color: #27272a;">
-<div style="display: flex; flex-direction: column; gap: 20px;">
-<span class="mono" style="font-size: 12px; color: #15803d;">● activo</span>
-<div style="font-family: 'Playfair Display', Georgia, serif; font-size: 64px; line-height: 1; color: #0a0a0a;">Ónix</div>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #52525b;">Cotizador de fletes por WhatsApp. Calcula el precio de cada viaje con el perfil de costos de tu empresa y lo formaliza por correo.</p>
-<span style="font-size: 15px; color: #0a0a0a;">Conocer a Ónix ›</span>
-</div>
-<div style="display: flex; justify-content: center;">
-<div style="position: relative; width: 100%; display: flex; flex-direction: column; align-items: center;"><div aria-hidden="true" style="position: absolute; left: 40%; bottom: 2%; width: 56%; height: 19%; transform: skewX(-52deg); transform-origin: left bottom; background: linear-gradient(90deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.18) 45%, rgba(0,0,0,0) 100%); border-radius: 40% 60% 60% 40%; filter: blur(8px);"></div><img src="/img/onix-piedra-2.webp" alt="Piedra de ónix pulida" width="645" height="603" loading="lazy" decoding="async" style="width: 100%; max-width: 300px; height: auto; display: block; position: relative; z-index: 1;"></div>
-</div>
-</a>
-<div style="overflow: hidden; border: 1px dashed #f38004; border-radius: 16px; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px;">
-<span class="mono" style="font-size: 12px; color: #71717a;">○ en desarrollo</span>
-<div style="display: flex; justify-content: center; flex-grow: 1; align-items: center;"><div style="position: relative; width: 100%; display: flex; flex-direction: column; align-items: center;"><div aria-hidden="true" style="position: absolute; left: 42%; bottom: 2%; width: 48%; height: 18%; transform: skewX(-55deg); transform-origin: left bottom; background: linear-gradient(90deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.09) 45%, rgba(0,0,0,0) 100%); border-radius: 40% 60% 60% 40%; filter: blur(8px);"></div><img src="/img/proxima-piedra.webp" alt="Silueta borrosa de la siguiente piedra: un nuevo agente de SOLI en desarrollo" width="151" height="260" loading="lazy" decoding="async" style="height: 190px; width: auto; display: block; position: relative; z-index: 1; filter: blur(10px) saturate(0.8); opacity: 0.75;"></div></div>
-<div style="display: flex; flex-direction: column; gap: 12px;">
-<div style="font-family: 'Playfair Display', Georgia, serif; font-size: 40px; line-height: 1; color: #71717a;">Próximamente</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">Nuevos agentes para el resto de tu operación. Cada uno con su propia piedra.</p>
-</div>
+<section class="sec sec-alt" aria-labelledby="t-quien">
+<div class="wrap">
+<div class="head"><p class="eyebrow">¿Para quién es?</p><h2 class="h2" id="t-quien">Para empresas de transporte que cotizan fletes todos los días.</h2></div>
+<div class="grid3">
+<div class="card"><h3>Transportistas con flota propia</h3><p>Que necesitan saber rápido cuánto cobrar sin quedarse por debajo de su costo.</p></div>
+<div class="card"><h3>Logísticas y agencias de carga</h3><p>Que reciben muchas solicitudes y pierden fletes por tardar en contestar.</p></div>
+<div class="card"><h3>Equipos de ventas</h3><p>Que ya cotizan por WhatsApp y quieren hacerlo en segundos, no en horas.</p></div>
 </div>
 </div>
 </section>
 
-<!-- ONIX A FONDO -->
-<section class="wrap" id="onix" style="width: 100%; max-width: 1200px; box-sizing: border-box; padding: 96px 0; display: flex; flex-direction: column; gap: 64px;">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px;">
-<span class="eyebrow">Ónix</span>
-<h2 class="h2">Te escriben por WhatsApp. Ónix contesta con el precio.</h2>
-<p class="lead">Sin apps nuevas ni capacitación. Tu equipo pregunta como ya lo hace: con el origen, el destino y la unidad. Ónix responde en el mismo chat y deja la cotización formal en el correo.</p>
-</div>
-<div style="display: grid; grid-template-columns: 5fr 7fr; gap: 16px;">
-
-<!-- chat (animado) -->
-<div class="card" style="overflow: hidden; display: flex; flex-direction: column; height: 600px;">
-<div style="display: flex; gap: 12px; align-items: center; padding: 16px 24px; border-bottom: 1px solid #e4e4e7;">
-<div style="width: 32px; height: 32px; border-radius: 50%; background: #f4f4f5; border: 1px solid #e4e4e7; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 16px; color: #0a0a0a;">Ó</div>
-<div style="display: flex; flex-direction: column;"><span style="font-size: 14px; font-weight: 500; color: #0a0a0a;">Ónix · Tu logística</span><span class="mono" style="font-size: 12px; color: #15803d;"><span id="chat-status">en línea</span></span></div>
-</div>
-<div style="padding: 24px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1; overflow: hidden;">
-<div id="chat" aria-live="polite" style="display: flex; flex-direction: column; gap: 12px;"></div>
-</div>
-</div>
-
-<!-- correo (general) -->
-<div class="card" style="overflow: hidden; display: flex; flex-direction: column; height: 600px;">
-<div style="display: flex; gap: 8px; align-items: center; padding: 16px 24px; border-bottom: 1px solid #e4e4e7;">
-<span style="width: 8px; height: 8px; border-radius: 50%; background: #e4e4e7;"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #e4e4e7;"></span><span style="width: 8px; height: 8px; border-radius: 50%; background: #e4e4e7;"></span>
-<span class="mono" style="margin-left: 12px; font-size: 12px; color: #52525b;">para: <span style="color: #b05400;">ventas@tulogistica.com.mx</span> · Cotización formal · Folio #[000]</span>
-</div>
-<div style="padding: 32px; display: flex; flex-direction: column; gap: 28px; flex-grow: 1;">
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;">
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<span class="eyebrow">Cotización formal</span>
-<span style="font-size: 24px; color: #0a0a0a; font-weight: 500;">Aguascalientes → Cd. de México</span>
-<span class="mono" style="font-size: 12px; color: #52525b;">FULL · viaje redondo</span>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px; align-items: flex-end;">
-<span class="eyebrow">Precio sugerido</span>
-<span style="font-size: 28px; color: #0a0a0a; font-weight: 500;">$*****</span>
-</div>
-</div>
-<div style="border: 1px solid #e4e4e7; border-radius: 6px; background: #f4f4f5; height: 220px; overflow: hidden;">
-<svg width="100%" height="220" viewBox="0 0 560 220" preserveAspectRatio="xMidYMid meet" aria-label="Mapa de la ruta cotizada" role="img" style="display: block;">
-<g stroke="#e4e4e7" stroke-width="1"><line x1="0" y1="55" x2="560" y2="55"></line><line x1="0" y1="110" x2="560" y2="110"></line><line x1="0" y1="165" x2="560" y2="165"></line><line x1="140" y1="0" x2="140" y2="220"></line><line x1="280" y1="0" x2="280" y2="220"></line><line x1="420" y1="0" x2="420" y2="220"></line></g>
-<polyline points="90,44 150,70 205,86 262,108 320,128 380,146 430,160 478,180" fill="none" stroke="#f38004" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
-<circle cx="90" cy="44" r="5" fill="#0a0a0a"></circle><circle cx="478" cy="180" r="5" fill="#0a0a0a"></circle>
-<text x="102" y="40" fill="#52525b" font-family="JetBrains Mono, monospace" font-size="11">AGS</text>
-<text x="430" y="202" fill="#52525b" font-family="JetBrains Mono, monospace" font-size="11">CDMX</text>
-</svg>
-</div>
-<div style="display: flex; flex-direction: column; gap: 12px;">
-<span class="eyebrow">Desglose de costos</span>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 32px;">
-<span style="height: 8px; border-radius: 4px; background: #e4e4e7; width: 90%;"></span>
-<span style="height: 8px; border-radius: 4px; background: #e4e4e7; width: 70%;"></span>
-<span style="height: 8px; border-radius: 4px; background: #e4e4e7; width: 60%;"></span>
-<span style="height: 8px; border-radius: 4px; background: #e4e4e7; width: 85%;"></span>
-<span style="height: 8px; border-radius: 4px; background: #e4e4e7; width: 75%;"></span>
-<span style="height: 8px; border-radius: 4px; background: #e4e4e7; width: 55%;"></span>
-</div>
-<span style="font-size: 13px; color: #71717a;">El desglose completo llega en tu correo.</span>
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- COMO FUNCIONA -->
-<section class="wrap" id="como" style="width: 100%; max-width: 1200px; box-sizing: border-box; padding: 96px 0; display: flex; flex-direction: column; gap: 64px;">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px;">
-<span class="eyebrow">Cómo funciona</span>
-<h2 class="h2">De un mensaje a una cotización formal, en cuatro pasos.</h2>
-</div>
-<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px;">
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 16px;">
-<span class="mono" style="font-size: 14px; color: #b05400;">01</span>
-<div style="font-size: 20px; line-height: 1.3; color: #0a0a0a; font-weight: 500;">Preguntas por WhatsApp</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">Escribes la ruta como la dirías a un compañero. Sin formularios ni apps nuevas.</p>
-</div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 16px;">
-<span class="mono" style="font-size: 14px; color: #b05400;">02</span>
-<div style="font-size: 20px; line-height: 1.3; color: #0a0a0a; font-weight: 500;">Ónix entiende el viaje</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">Identifica la ruta, la unidad y el tipo de viaje. Si falta algo, lo pregunta. Nunca adivina.</p>
-</div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 16px;">
-<span class="mono" style="font-size: 14px; color: #b05400;">03</span>
-<div style="font-size: 20px; line-height: 1.3; color: #0a0a0a; font-weight: 500;">Calcula con tus costos</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">Usa datos reales de la ruta, la normatividad vigente y el perfil de costos de tu empresa.</p>
-</div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 16px;">
-<span class="mono" style="font-size: 14px; color: #b05400;">04</span>
-<div style="font-size: 20px; line-height: 1.3; color: #0a0a0a; font-weight: 500;">Responde y formaliza</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">Precio en el chat y cotización formal en tu correo. Cuando cierras el trato, lo confirmas en el mismo chat.</p>
+<section class="sec" aria-labelledby="t-dif">
+<div class="wrap">
+<div class="head"><p class="eyebrow">La diferencia</p><h2 class="h2" id="t-dif">Así cotizas hoy, y así cotizas con Ónix.</h2></div>
+<div class="cmp" role="table" aria-label="Comparación sin Ónix y con Ónix">
+<div class="cmp-row cmp-head" role="row"><span role="columnheader"><span class="hp">Tema</span></span><span class="no" role="columnheader">Sin Ónix</span><span class="si" role="columnheader">Con Ónix</span></div>
+<div class="cmp-row" role="row"><span class="k" role="rowheader">Tiempo por cotización</span><span class="no" role="cell"><span class="lbl">Sin Ónix: </span>De minutos a horas</span><span class="si" role="cell"><span class="lbl">Con Ónix: </span>Segundos</span></div>
+<div class="cmp-row" role="row"><span class="k" role="rowheader">Cálculo del precio</span><span class="no" role="cell"><span class="lbl">Sin Ónix: </span>Excel, mapa y calculadora</span><span class="si" role="cell"><span class="lbl">Con Ónix: </span>Automático, con tus costos</span></div>
+<div class="cmp-row" role="row"><span class="k" role="rowheader">Casetas y kilómetros</span><span class="no" role="cell"><span class="lbl">Sin Ónix: </span>Buscarlas una por una</span><span class="si" role="cell"><span class="lbl">Con Ónix: </span>Incluidas en cada cotización</span></div>
+<div class="cmp-row" role="row"><span class="k" role="rowheader">Cotización formal</span><span class="no" role="cell"><span class="lbl">Sin Ónix: </span>Hacerla a mano</span><span class="si" role="cell"><span class="lbl">Con Ónix: </span>Llega sola a tu correo, con folio</span></div>
+<div class="cmp-row" role="row"><span class="k" role="rowheader">Horario</span><span class="no" role="cell"><span class="lbl">Sin Ónix: </span>Solo en horario de oficina</span><span class="si" role="cell"><span class="lbl">Con Ónix: </span>24 horas, los 7 días</span></div>
 </div>
 </div>
 </section>
 
-<!-- PRECIO REAL -->
-<section class="wrap" id="precio" style="width: 100%; max-width: 1200px; box-sizing: border-box; padding: 96px 0; display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start;">
-<div style="display: flex; flex-direction: column; gap: 16px;">
-<span class="eyebrow">Precio real, no al ojo</span>
-<h2 class="h2">Cada peso tiene un origen.</h2>
-<p class="lead">Al dar de alta tu empresa configuramos tus costos. Ónix los aplica a cada viaje, así que el precio sugerido nunca queda por debajo de lo que te cuesta mover la unidad.</p>
+<section class="sec sec-alt pasos" id="como" aria-labelledby="t-como">
+<div class="wrap">
+<div class="head"><p class="eyebrow">Cómo funciona</p><h2 class="h2" id="t-como">Tres pasos. Todo desde WhatsApp.</h2></div>
+<ol class="grid3" style="list-style:none;margin-bottom:0;padding:0">
+<li class="card"><span class="num" aria-hidden="true">1</span><h3>Escribes la ruta</h3><p>Como se lo dirías a un compañero: origen, destino y tipo de unidad. Por ejemplo: “León a Monterrey, sencillo, redondo”.</p></li>
+<li class="card"><span class="num" aria-hidden="true">2</span><h3>Ónix calcula</h3><p>Suma kilómetros, casetas, diésel, operador y gastos de tu empresa, y le agrega el margen que tú decides.</p></li>
+<li class="card"><span class="num" aria-hidden="true">3</span><h3>Recibes el precio</h3><p>En el mismo chat, en segundos. Y la cotización formal, con folio y desglose, llega a tu correo.</p></li>
+</ol>
 </div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 12px;">
-<span class="mono" style="font-size: 12px; color: #52525b;">01</span>
-<div style="font-size: 18px; color: #0a0a0a; font-weight: 500;">La ruta</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">Lo que cuesta ese camino en específico, calculado con datos reales.</p>
+</section>
+
+<section class="sec inc" id="incluye" aria-labelledby="t-inc">
+<div class="wrap">
+<div class="head"><p class="eyebrow">Qué incluye</p><h2 class="h2" id="t-inc">Todo lo que necesitas para cotizar bien.</h2></div>
+<ul class="grid4" style="list-style:none;margin-bottom:0;padding:0">
+<li class="card"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b05400" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><h3>Precio con tus costos</h3><p>No un promedio del mercado: los de tu empresa.</p></li>
+<li class="card"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b05400" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><h3>Casetas incluidas</h3><p>Cada caseta de la ruta, según tu tipo de unidad.</p></li>
+<li class="card"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b05400" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><h3>Aviso de carreteras</h3><p>Te avisa si un tramo no permite tu tipo de unidad.</p></li>
+<li class="card"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b05400" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><h3>Cotización formal</h3><p>Con folio, mapa de la ruta y desglose, en tu correo.</p></li>
+<li class="card"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b05400" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><h3>Confirmas con un mensaje</h3><p>Cierras el flete escribiendo “confirma el folio 12”.</p></li>
+<li class="card"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b05400" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><h3>Para todo tu equipo</h3><p>Vendedores y gerente, cada quien con su número.</p></li>
+<li class="card"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b05400" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><h3>Entiende cómo escribes</h3><p>Sin acentos o con errores. Si le falta algo, te pregunta.</p></li>
+<li class="card"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b05400" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><h3>Tus datos, privados</h3><p>Tus costos y cotizaciones no se comparten con nadie.</p></li>
+</ul>
 </div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 12px;">
-<span class="mono" style="font-size: 12px; color: #52525b;">02</span>
-<div style="font-size: 18px; color: #0a0a0a; font-weight: 500;">Tu operación</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">Tus unidades, tu gente y tus gastos fijos. Los de tu empresa, no un promedio.</p>
+</section>
+
+<section class="sec sec-alt demo" id="demo" aria-labelledby="t-demo">
+<div class="wrap">
+<div class="demo-izq">
+<div class="head"><p class="eyebrow">Cómo empezar</p><h2 class="h2" id="t-demo">Pruébalo 7 días con tus propias rutas.</h2></div>
+<ol class="steps">
+<li><span class="n" aria-hidden="true">1</span><div><b>Déjanos tus datos</b><span>Te contactamos para agendar una llamada corta.</span></div></li>
+<li><span class="n" aria-hidden="true">2</span><div><b>Configuramos tus costos</b><span>Tus unidades, diésel, operador, gastos fijos y tu margen. Lo hacemos contigo.</span></div></li>
+<li><span class="n" aria-hidden="true">3</span><div><b>Cotizas por WhatsApp</b><span>Durante 7 días, hasta 3 cotizaciones al día. Si te sirve, eliges tu plan.</span></div></li>
+</ol>
 </div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 12px;">
-<span class="mono" style="font-size: 12px; color: #b05400;">03</span>
-<div style="font-size: 18px; color: #0a0a0a; font-weight: 500;">Tu margen</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">La utilidad la decides tú. Ónix la respeta en cada cotización.</p>
+
+<div class="form">
+<form id="demo-form" novalidate style="display:flex;flex-direction:column;gap:18px">
+<h3>Pide tu demo</h3>
+<p class="sub">Te respondemos por correo o por teléfono.</p>
+<div class="field">
+<label for="dm-nombre">Nombre</label>
+<input id="dm-nombre" name="nombre" type="text" autocomplete="name" required maxlength="100" placeholder="Tu nombre" aria-describedby="dm-nombre-err">
+<span id="dm-nombre-err" class="err" aria-live="polite"></span>
+</div>
+<div class="field">
+<label for="dm-correo">Correo de tu empresa</label>
+<input id="dm-correo" name="correo" type="email" autocomplete="email" inputmode="email" required maxlength="254" placeholder="tu@tuempresa.com.mx" aria-describedby="dm-correo-hint dm-correo-err">
+<span id="dm-correo-hint" class="hint">No aceptamos Gmail, Hotmail, Outlook, Yahoo ni similares.</span>
+<span id="dm-correo-err" class="err" aria-live="polite"></span>
+</div>
+<div class="field">
+<label for="dm-tel">Teléfono / WhatsApp</label>
+<input id="dm-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required maxlength="20" placeholder="10 dígitos" aria-describedby="dm-tel-err">
+<span id="dm-tel-err" class="err" aria-live="polite"></span>
+</div>
+<div class="hp" aria-hidden="true"><label for="dm-web">Sitio web (déjalo vacío)</label><input id="dm-web" name="sitio_web" type="text" tabindex="-1" autocomplete="off"></div>
+<button type="submit" class="btn btn-main" id="dm-enviar">Quiero mi demo</button>
+<p class="form-err" id="dm-form-err" role="alert"></p>
+<p class="legal">Al enviar aceptas nuestro <a href="/privacidad.html">Aviso de privacidad</a>.</p>
+</form>
+<div class="ok" id="dm-ok" role="status" tabindex="-1">
+<h3>¡Gracias! Recibimos tu solicitud.</h3>
+<p>Te contactaremos muy pronto para agendar tu demo.</p>
+</div>
 </div>
 </div>
 </section>
 
-<!-- FUNCIONES -->
-<section class="wrap" style="width: 100%; max-width: 1200px; box-sizing: border-box; padding: 96px 0; display: flex; flex-direction: column; gap: 64px;">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px;">
-<span class="eyebrow">Lo que Ónix ya sabe hacer</span>
-<h2 class="h2">Pensado para cómo se cotiza de verdad en México.</h2>
-</div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 12px;">
-<div style="font-size: 18px; color: #0a0a0a; font-weight: 500;">Elige cómo llegar</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">Cotiza por la ruta que prefieras o compara opciones en la misma respuesta.</p>
-</div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 12px;">
-<div style="font-size: 18px; color: #0a0a0a; font-weight: 500;">Viajes con repartos</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">Entregas intermedias incluidas en la misma cotización.</p>
-</div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 12px;">
-<div style="font-size: 18px; color: #0a0a0a; font-weight: 500;">Normatividad al día</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">Toma en cuenta las restricciones de carreteras antes de que salga la unidad.</p>
-</div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 12px;">
-<div style="font-size: 18px; color: #0a0a0a; font-weight: 500;">Del precio al cierre</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">Cada cotización queda registrada y se confirma con un mensaje.</p>
-</div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 12px;">
-<div style="font-size: 18px; color: #0a0a0a; font-weight: 500;">Entiende cómo escribes</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">Sin acentos, con errores de dedo o en varios mensajes. Si no entiende, pregunta en lugar de inventar.</p>
-</div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 12px;">
-<div style="font-size: 18px; color: #0a0a0a; font-weight: 500;">Uso bajo control</div>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b;">Ves cuánto se usa Ónix y el gasto nunca se dispara.</p>
-</div>
+<section class="sec faq" id="preguntas" aria-labelledby="t-faq">
+<div class="wrap">
+<div class="head"><p class="eyebrow">Preguntas frecuentes</p><h2 class="h2" id="t-faq">Lo que más nos preguntan.</h2></div>
+<dl style="margin-top:0">
+<dt>¿Tengo que instalar algo?</dt>
+<dd>No. Ónix funciona en WhatsApp. Tu equipo le escribe a un número, como a cualquier contacto.</dd>
+<dt>¿De dónde saca el precio?</dt>
+<dd>De los costos que nos das al empezar (diésel, operador, mantenimiento, gastos fijos) más los kilómetros y casetas de la ruta. El precio final siempre lo decides tú.</dd>
+<dt>¿Quién más ve mis costos?</dt>
+<dd>Nadie. Tu información solo se usa para tus cotizaciones.</dd>
+<dt>¿Cuántas personas lo pueden usar?</dt>
+<dd>Las que tú autorices. Tú eliges si cualquiera puede confirmar fletes o solo el gerente.</dd>
+<dt>¿Cuánto cuesta?</dt>
+<dd>Depende de cuántas cotizaciones haces al mes. La prueba de 7 días es para que lo veas funcionando antes de decidir; en la demo te damos el precio.</dd>
+</dl>
 </div>
 </section>
 
-<!-- RESULTADOS -->
-<section class="wrap" style="width: 100%; border-top: 1px solid #e4e4e7; border-bottom: 1px solid #e4e4e7; display: flex; justify-content: center;">
-<div style="width: 100%; max-width: 1200px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));">
-<div style="padding: 56px 32px 56px 0; border-right: 1px solid #e4e4e7; display: flex; flex-direction: column; gap: 12px;">
-<span style="font-family: 'Playfair Display', Georgia, serif; font-size: 48px; line-height: 1; color: #0a0a0a;">Segundos</span>
-<span style="font-size: 15px; line-height: 1.5; color: #52525b;">de la pregunta al precio. Antes eran horas.</span>
-</div>
-<div style="padding: 56px 32px; border-right: 1px solid #e4e4e7; display: flex; flex-direction: column; gap: 12px;">
-<span style="font-family: 'Playfair Display', Georgia, serif; font-size: 48px; line-height: 1; color: #0a0a0a;">24/7</span>
-<span style="font-size: 15px; line-height: 1.5; color: #52525b;">cotiza aunque tu oficina esté cerrada, también en fin de semana.</span>
-</div>
-<div style="padding: 56px 32px; border-right: 1px solid #e4e4e7; display: flex; flex-direction: column; gap: 12px;">
-<span style="font-family: 'Playfair Display', Georgia, serif; font-size: 48px; line-height: 1; color: #0a0a0a;">Cero</span>
-<span style="font-size: 15px; line-height: 1.5; color: #52525b;">apps nuevas. Tu equipo lo usa desde el WhatsApp de siempre.</span>
-</div>
-<div style="padding: 56px 0 56px 32px; display: flex; flex-direction: column; gap: 12px;">
-<span style="font-family: 'Playfair Display', Georgia, serif; font-size: 48px; line-height: 1; color: #b05400;">Todas</span>
-<span style="font-size: 15px; line-height: 1.5; color: #52525b;">tus cotizaciones con folio y respaldo en tu correo.</span>
+<section class="cierre" aria-labelledby="t-cierre">
+<div class="wrap">
+<div class="txt">
+<h2 id="t-cierre">Contesta primero. Cobra lo justo.</h2>
+<p>El flete se lo lleva quien responde primero con un buen precio. Con Ónix, ese eres tú.</p>
+<div class="cta-row">
+<a href="#demo" class="btn btn-main" data-demo>Pide tu demo</a>
+<a href="mailto:demo@soli.com.mx">o escríbenos a demo@soli.com.mx</a>
 </div>
 </div>
-</section>
-
-<!-- CTA -->
-<section class="wrap" id="demo" style="width: 100%; max-width: 1200px; box-sizing: border-box; padding: 144px 0; display: grid; grid-template-columns: 7fr 5fr; gap: 64px; align-items: center;">
-<div style="display: flex; flex-direction: column; gap: 32px; align-items: flex-start;">
-<span class="eyebrow">Demo</span>
-<h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 77px; line-height: 1; letter-spacing: -0.77px; color: #0a0a0a;">Pon a Ónix a cotizar por ti.</h2>
-<p class="lead" style="max-width: 520px;">Déjanos tus datos y cotizamos una de tus rutas con tus propios costos, en vivo. Después lo pruebas 7 días con tu equipo.</p>
-<div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-<a class="solid" href="#demo" data-demo>Pide tu demo</a>
-<a class="mono" href="mailto:demo@soli.com.mx" style="font-size: 13px; color: #52525b; min-height: 44px; display: inline-flex; align-items: center;">o escríbenos a demo@soli.com.mx</a>
-</div>
-</div>
-<div style="display: flex; justify-content: center;">
-<div style="position: relative; width: 100%; display: flex; flex-direction: column; align-items: center;"><div aria-hidden="true" style="position: absolute; left: 40%; bottom: 1%; width: 72%; height: 20%; transform: skewX(-55deg); transform-origin: left bottom; background: linear-gradient(90deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.18) 45%, rgba(0,0,0,0) 100%); border-radius: 40% 60% 60% 40%; filter: blur(8px);"></div><img src="/img/onix-piedra-2.webp" alt="Piedra de ónix, lista para cotizar tus rutas" width="645" height="603" loading="lazy" decoding="async" style="width: 100%; max-width: 380px; height: auto; display: block; position: relative; z-index: 1;"></div>
+<img src="/img/onix-piedra-2.webp" alt="Piedra de ónix, símbolo de Ónix" width="645" height="603" loading="lazy" decoding="async">
 </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
-<footer class="wrap" style="width: 100%; max-width: 1200px; box-sizing: border-box; padding: 32px 0 48px; border-top: 1px solid #e4e4e7; display: flex; justify-content: space-between; align-items: center;">
-<div style="display: flex; gap: 16px; align-items: center;">
-<img src="/img/soli-logo.webp" alt="SOLI" width="59" height="22" loading="lazy" style="height: 22px; width: auto; display: block;">
-<span style="font-size: 14px; color: #52525b;">Soluciones Logísticas Inteligentes · © 2026</span>
-</div>
-<div style="display: flex; gap: 24px; font-size: 14px; flex-wrap: wrap;">
-<a href="/privacidad.html" style="color: #52525b;">Aviso de privacidad</a>
-<a href="/terminos.html" style="color: #52525b;">Términos y condiciones</a>
-<a href="#" data-cookies style="color: #52525b;">Cookies</a>
+<footer class="pie">
+<div class="wrap">
+<div class="marca"><img src="/img/soli-logo.webp" alt="SOLI" width="59" height="22" loading="lazy" style="height:22px;width:auto;display:block"><span>SOLI es una marca de Dan Obed Romero Merino · © 2026</span></div>
+<nav aria-label="Legal">
+<a href="/privacidad.html">Aviso de privacidad</a>
+<a href="/terminos.html">Términos y condiciones</a>
+<a href="#" data-cookies>Cookies</a>
+<a href="mailto:contacto@soli.com.mx">contacto@soli.com.mx</a>
+</nav>
 </div>
 </footer>
 
-</div>
-
-<script>
-(function(){
-var MSGS=[
- {who:'user',text:'cuánto de Aguascalientes a Cd Mexico'},
- {who:'bot',text:'¿En qué unidad y es solo ida o ida y vuelta?'},
- {who:'user',text:'full, ida y vuelta'},
- {who:'quote'},
- {who:'user',text:'confirma folio #[000] con el precio *****'},
- {who:'ok',text:'Confirmado. Te llegó la confirmación por correo.'}
-];
-var box=document.getElementById('chat'),st=document.getElementById('chat-status'),t;
-var U='align-self:flex-end;max-width:80%;background:#f4f4f5;border:1px solid #e4e4e7;border-radius:12px 12px 4px 12px;padding:12px 14px;font-size:14px;line-height:1.5;color:#27272a;';
-var B='align-self:flex-start;max-width:80%;border:1px solid #e4e4e7;border-radius:12px 12px 12px 4px;padding:12px 14px;font-size:14px;line-height:1.5;color:#27272a;';
-function el(style,html){var d=document.createElement('div');d.className='msg';d.setAttribute('style',style);if(html!=null)d.innerHTML=html;return d;}
-function txt(s){return s.replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
-function render(m){
- if(m.who==='user')return el(U,txt(m.text));
- if(m.who==='bot')return el(B,txt(m.text));
- if(m.who==='ok')return el(B,'<span style="color:#15803d">✓</span> '+txt(m.text));
- return el('align-self:flex-start;max-width:88%;border:1px solid #e4e4e7;border-radius:12px 12px 12px 4px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;',
- '<span class="mono" style="font-size:12px;color:#b05400">Cotización · Folio #[000]</span>'+
- '<span style="font-size:14px;color:#0a0a0a;font-weight:500">Aguascalientes → Cd. de México</span>'+
- '<span class="mono" style="font-size:12px;line-height:1.6;color:#52525b">FULL · viaje redondo · casetas incluidas</span>'+
- '<span style="font-size:18px;color:#0a0a0a;font-weight:500">Precio sugerido $*****</span>'+
- '<span style="font-size:13px;color:#52525b">Te mandé la cotización formal por correo.</span>');
-}
-function typing(){var d=el(B.replace('padding:12px 14px','padding:14px 16px')+'display:flex;gap:5px;align-items:center;');
- d.setAttribute('role','img');d.setAttribute('aria-label','Ónix está escribiendo');
- for(var i=0;i<3;i++){var s=document.createElement('span');s.className='dot'+(i?' d'+(i+1):'');s.setAttribute('style','width:6px;height:6px;border-radius:50%;background:#52525b');d.appendChild(s);}
- return d;}
-function step(i){
- if(i>=MSGS.length){t=setTimeout(play,5000);return;}
- var m=MSGS[i];
- if(m.who==='user'){box.appendChild(render(m));t=setTimeout(function(){step(i+1)},1100);}
- else{var ty=typing();box.appendChild(ty);st.textContent='escribiendo…';
-  t=setTimeout(function(){box.removeChild(ty);st.textContent='en línea';box.appendChild(render(m));t=setTimeout(function(){step(i+1)},1800);},m.who==='quote'?2000:1300);}
-}
-function play(){box.innerHTML='';st.textContent='en línea';t=setTimeout(function(){step(0)},900);}
-play();
-})();
-</script>
-
-<dialog id="demo-modal" class="dm-dialog" aria-labelledby="dm-title">
-<div class="dm-body">
-<div class="dm-head">
-<div>
-<h2 id="dm-title" class="dm-title">Pide tu demo de Ónix</h2>
-<p class="dm-sub">Déjanos tus datos y te contactamos para cotizar una de tus rutas en vivo.</p>
-</div>
-<button type="button" class="dm-x" data-close aria-label="Cerrar">×</button>
-</div>
-<form id="demo-form" name="demo" novalidate style="display:flex;flex-direction:column;gap:16px">
-<div class="dm-field">
-<label for="dm-nombre">Nombre</label>
-<input id="dm-nombre" name="nombre" type="text" autocomplete="name" required maxlength="100" aria-describedby="dm-nombre-err">
-<span id="dm-nombre-err" class="dm-err" aria-live="polite"></span>
-</div>
-<div class="dm-field">
-<label for="dm-correo">Correo corporativo</label>
-<input id="dm-correo" name="correo" type="email" autocomplete="email" inputmode="email" required maxlength="254" placeholder="tu@tuempresa.com.mx" aria-describedby="dm-correo-hint dm-correo-err">
-<span id="dm-correo-hint" class="dm-hint">Usa el correo de tu empresa. No aceptamos Gmail, Hotmail, Outlook, Yahoo ni similares.</span>
-<span id="dm-correo-err" class="dm-err" aria-live="polite"></span>
-</div>
-<div class="dm-field">
-<label for="dm-tel">Teléfono</label>
-<input id="dm-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required maxlength="20" placeholder="10 dígitos" aria-describedby="dm-tel-err">
-<span id="dm-tel-err" class="dm-err" aria-live="polite"></span>
-</div>
-<div class="dm-hp" aria-hidden="true"><label for="dm-web">Sitio web (déjalo vacío)</label><input id="dm-web" name="sitio_web" type="text" tabindex="-1" autocomplete="off"></div>
-<button type="submit" class="solid dm-submit">Enviar solicitud</button>
-<p class="dm-legal">Al enviar aceptas nuestro <a href="/privacidad.html" target="_blank" rel="noopener">Aviso de privacidad</a>. Solo usamos tus datos para contactarte sobre la demo.</p>
-<p class="dm-form-err" id="dm-form-err" role="alert"></p>
-</form>
-<div class="dm-ok" id="dm-ok" role="status">
-<p class="dm-title" style="font-size:28px">¡Gracias! Recibimos tu solicitud.</p>
-<p class="dm-sub" style="margin:0">Te contactaremos muy pronto para agendar tu demo.</p>
-<button type="button" class="ghost" data-close style="color:#0a0a0a;border-color:#e4e4e7;cursor:pointer;background:#fff;font:inherit;font-size:15px">Cerrar</button>
-</div>
-</div>
-</dialog>
 <script>
 (function(){
 var FREE=['gmail.com','googlemail.com','hotmail.com','hotmail.es','hotmail.com.mx','outlook.com','outlook.es','outlook.com.mx','live.com','live.com.mx','msn.com','yahoo.com','yahoo.com.mx','yahoo.es','ymail.com','rocketmail.com','icloud.com','me.com','mac.com','aol.com','protonmail.com','proton.me','pm.me','gmx.com','gmx.net','gmx.es','mail.com','yandex.com','yandex.ru','zoho.com','zohomail.com','tutanota.com','tuta.io','hey.com','prodigy.net.mx','infinitummail.com','terra.com.mx','qq.com','163.com','inbox.com','fastmail.com','mailinator.com','guerrillamail.com','10minutemail.com','temp-mail.org','yopmail.com','sharklasers.com','trashmail.com','getnada.com'];
-var dlg=document.getElementById('demo-modal'),form=document.getElementById('demo-form'),ok=document.getElementById('dm-ok');
-var nombre=document.getElementById('dm-nombre'),correo=document.getElementById('dm-correo'),tel=document.getElementById('dm-tel'),web=document.getElementById('dm-web'),ferr=document.getElementById('dm-form-err'),abierto=Date.now();
-function open(e){if(e)e.preventDefault();abierto=Date.now();form.style.display='flex';ok.classList.remove('show');ferr.textContent='';
- if(dlg.showModal){dlg.showModal();}else{dlg.setAttribute('open','');}setTimeout(function(){nombre.focus();},50);}
-function close(){if(dlg.close)dlg.close();else dlg.removeAttribute('open');}
-document.querySelectorAll('[data-demo]').forEach(function(a){a.addEventListener('click',open);});
-dlg.addEventListener('click',function(e){if(e.target===dlg||e.target.hasAttribute('data-close'))close();});
+var form=document.getElementById('demo-form'),ok=document.getElementById('dm-ok');
+var nombre=document.getElementById('dm-nombre'),correo=document.getElementById('dm-correo'),tel=document.getElementById('dm-tel'),web=document.getElementById('dm-web'),ferr=document.getElementById('dm-form-err'),btn=document.getElementById('dm-enviar');
+var inicio=null;
+form.addEventListener('focusin',function(){if(inicio===null)inicio=Date.now();});
+// Los botones "Pide tu demo" bajan al formulario y ponen el cursor en "Nombre".
+document.querySelectorAll('[data-demo]').forEach(function(a){a.addEventListener('click',function(){setTimeout(function(){if(form.style.display!=='none')nombre.focus({preventScroll:true});},500);});});
 function setErr(inp,msg){document.getElementById(inp.getAttribute('aria-describedby').split(' ').pop()).textContent=msg;inp.setAttribute('aria-invalid',msg?'true':'false');return !msg;}
 function vNombre(){var v=nombre.value.trim();return setErr(nombre,(v.length<2||v.length>100)?'Escribe tu nombre.':'');}
 function vCorreo(){var v=correo.value.trim().toLowerCase();
@@ -527,15 +438,15 @@ nombre.addEventListener('blur',vNombre);correo.addEventListener('blur',vCorreo);
 form.addEventListener('submit',function(e){e.preventDefault();ferr.textContent='';
  var a=vNombre(),b=vCorreo(),c=vTel();
  if(!(a&&b&&c)){var f=form.querySelector('[aria-invalid="true"]');if(f)f.focus();return;}
- var btn=form.querySelector('.dm-submit');btn.disabled=true;btn.textContent='Enviando…';
- fetch('https://web-production-0f5fd.up.railway.app/demo',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nombre:nombre.value.trim(),correo:correo.value.trim(),telefono:telDigitos(),sitio_web:web.value,t:Date.now()-abierto})})
+ btn.disabled=true;btn.textContent='Enviando…';
+ fetch('https://web-production-0f5fd.up.railway.app/demo',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nombre:nombre.value.trim(),correo:correo.value.trim(),telefono:telDigitos(),sitio_web:web.value,t:inicio?Date.now()-inicio:undefined})})
  .then(function(r){return r.json().catch(function(){return {};}).then(function(data){return {status:r.status,data:data};});})
  .then(function(res){
-  if(res.data&&res.data.ok){form.reset();form.style.display='none';ok.classList.add('show');ok.querySelector('button').focus();}
+  if(res.data&&res.data.ok){form.reset();form.style.display='none';ok.classList.add('show');ok.focus();}
   else{ferr.textContent=(res.data&&res.data.errores&&res.data.errores[0])||'No se pudo enviar. Intenta de nuevo o escríbenos a demo@soli.com.mx.';}
  })
  .catch(function(){ferr.textContent='No se pudo enviar. Intenta de nuevo o escríbenos a demo@soli.com.mx.';})
- .finally(function(){btn.disabled=false;btn.textContent='Enviar solicitud';});
+ .finally(function(){btn.disabled=false;btn.textContent='Quiero mi demo';});
 });
 })();
 </script>

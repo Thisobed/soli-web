@@ -27,8 +27,8 @@
   }
 
   var css = '' +
-    '.ck{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:560px;margin:0 auto;background:#fff;color:#27272a;' +
-    'border:1px solid #f38004;border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.14);padding:20px 22px;display:flex;flex-direction:column;gap:14px;' +
+    '.ck{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:780px;margin:0 auto;background:#fff;color:#27272a;' +
+    'border:1px solid #f38004;border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.14);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 20px;' +
     'font:15px/1.55 Inter,system-ui,sans-serif}' +
     '.ck p{margin:0}.ck a{color:#0a0a0a;text-decoration:underline;text-decoration-color:#f38004;text-underline-offset:3px}' +
     '.ck-b{display:flex;gap:10px;flex-wrap:wrap}' +
@@ -48,8 +48,7 @@
     d.id = 'ck'; d.className = 'ck';
     d.setAttribute('role', 'region'); d.setAttribute('aria-label', 'Aviso de cookies');
     d.innerHTML =
-      '<p>Usamos una analítica <strong>anónima y sin cookies de publicidad</strong> para saber cuántas personas visitan el sitio. ' +
-      'No guardamos quién eres. <a href="/privacidad.html#cookies">Más información sobre cookies</a></p>' +
+      '<p>Usamos cookies para mejorar tu experiencia. <a href="/privacidad.html#cookies">Aviso de privacidad</a></p>' +
       '<div class="ck-b"><button type="button" class="si">Aceptar</button><button type="button" class="no">Rechazar</button></div>';
     document.body.appendChild(d);
     d.querySelector('.si').addEventListener('click', function () { guardar('si'); d.remove(); cargarAnalitica(); });
